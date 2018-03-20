@@ -46,7 +46,7 @@ cat $1_L33t $1_L33t_append > $1_a3
 rm $1_L33t $1_L33t_append
 
 echo "# Concatenate $1_a3 $1_L33t_years"
-cat $1_a3 $1_L33t_years > $1_mutated
+cat $1_a3 $1_L33t_years > $1_mutated_0-00
 rm $1_a3 $1_L33t_years
 
-echo "# Done! We have `wc -l $1_mutated` password"
+echo "# Done! We have `wc -l $1_mutated_0-00` password"

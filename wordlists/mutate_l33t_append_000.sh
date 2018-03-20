@@ -12,17 +12,17 @@ for x in {2..7}; do
 	rm $1_s$((x-1))
 done
 
-echo "# [2/5] Genereting $1_max_append"
-john -w:$1 -ru:netr_append_000 -stdout > $1_max_append 2>/dev/null
-echo "# [3/5] Genereting $1_max_l33t_append"
-john -w:$1_s7 -ru:netr_append_000 -stdout > $1_max_l33t_append 2>/dev/null
+echo "# [2/5] Genereting $1_append_000"
+john -w:$1 -ru:netr_append_000 -stdout > $1_append_000 2>/dev/null
+echo "# [3/5] Genereting $1_l33t_append_000"
+john -w:$1_s7 -ru:netr_append_000 -stdout > $1_l33t_append_000 2>/dev/null
 echo "# [4/5] Genereting $1_L33t"
-john -w:$1_max_append -ru:netr_cap -stdout > $1_max_Append 2>/dev/null
-echo "# [5/5] Genereting $1_L33t_append"
-john -w:$1_max_l33t_append -ru:netr_cap -stdout > $1_max_L33t_append 2>/dev/null
+john -w:$1_append_000 -ru:netr_cap -stdout > $1_Append_000 2>/dev/null
+echo "# [5/5] Genereting $1_L33t_append_000"
+john -w:$1_l33t_append_000 -ru:netr_cap -stdout > $1_L33t_append_000 2>/dev/null
 
 echo "# Concatenate all"
-cat $1_max_append $1_max_l33t_append $1_max_Append $1_max_L33t_append > $1_max_mutated
-rm $1_max_append $1_max_l33t_append $1_max_Append $1_max_L33t_append
+cat $1_append_000 $1_l33t_append_000 $1_Append_000 $1_L33t_append_000 > $1_mutated_000
+rm $1_append_000 $1_l33t_append_000 $1_Append_000 $1_L33t_append_000
 
-echo "# Done! We have `wc -l $1_max_mutated` password"
+echo "# Done! We have `wc -l $1_mutated_000` password"
