@@ -4,15 +4,15 @@
 
 ### Description
 Simple script to get words from specific category in wiktionary.org.
-It also replace words to lowercase, remove polish characters, duplicates, spaces. Words must have at least 4 and no more that 14 characters.
+It also replace words to lowercase, remove language specific characters, duplicates, spaces. Words must have at least 4 and no more that 14 characters.
 
 ### Usage
 Change 4 variables for your needs:
 ```bash
 output_file=wiki.dic
-pagefrom="a_battuta"    # first word to start from
-base_url="https://pl.wiktionary.org"
-index_url="/w/index.php?title=Kategoria:polski_(indeks)"
+pagefrom="abcd"    # first word to start from
+base_url="https://XX.wiktionary.org"
+index_url="/w/index.php?title=Category:sth"
 ```
 
 ## mutate_years_l33t_append_0-000.sh
